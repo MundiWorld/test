@@ -1,0 +1,43 @@
+openapi: 3.0.1
+info:
+  title: School proyect plugin
+  description: just playing
+  version: 'v1'
+servers:
+  - url: https://your-plugin-domain.com
+paths:
+  /search_papers:
+    get:
+      operationId: searchPapers
+      summary: Search for scientific papers on Google Scholar
+      parameters:
+        - name: query
+          in: query
+          description: The search query for papers
+          required: true
+          schema:
+            type: string
+        - name: num_results
+          in: query
+          description: The number of papers to return (optional, default is 5)
+          required: false
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: A list of papers found on Google Scholar
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/searchPapersResponse'
+components:
+  schemas:
+    searchPapersResponse:
+      type: object
+      properties:
+        response:
+          type: string
+          description: A formatted and informal response containing the list of papers found
+        error:
+          type: string
+          description: Error message if something goes wrong

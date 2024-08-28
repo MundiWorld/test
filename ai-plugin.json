@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "escuela tes",
+  "name_for_model": "scholarpapersearch",
+  "description_for_human": "Plugin to search for scientific papers using Google Scholar and get informal responses.",
+  "description_for_model": "Plugin for searching scientific papers using Google Scholar. Use keywords 'search', 'query', 'num_results', 'informal', and 'include_base_info' to prompt the plugin.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://your-plugin-domain.com/.well-known/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://your-domain.com/logo.png",
+  "contact_email": "support@your-domain.com",
+  "legal_info_url": "https://www.your-domain.com/legal"
+}
