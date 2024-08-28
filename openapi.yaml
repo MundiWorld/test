@@ -4,7 +4,7 @@ info:
   description: just playing
   version: 'v1'
 servers:
-  - url: https://your-plugin-domain.com
+  - url: https://mundiworld.github.io/test/
 paths:
   /search_papers:
     get:
